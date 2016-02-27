@@ -20,6 +20,22 @@ public class FirstActivity extends AppCompatActivity {
                 startActivity(new Intent(FirstActivity.this, MainActivity.class));
             }
         });
+
+        button = (Button) findViewById(R.id.distance);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(FirstActivity.this, DistanceActivity.class));
+            }
+        });
+
+        button = (Button) findViewById(R.id.time);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(FirstActivity.this, TimeActivity.class));
+            }
+        });
     }
 
     
