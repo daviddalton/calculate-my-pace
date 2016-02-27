@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Calculate My Pace</string>
+    <string name="calculate_button">Calculate</string>
+    <string name="title_activity_calculate">calculate</string>
+    <string name="minutes">Minutes:</string>
+    <string name="hours">Hours:</string>
+    <string name="seconds">Seconds:</string>
+    <string name="distance">Distance:</string>
+
+</resources>
