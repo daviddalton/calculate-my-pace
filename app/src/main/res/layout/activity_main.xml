@@ -13,7 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Insert your time and distance in the fields below and then hit the calculate button!"
-        android:id="@+id/textView" />
+        android:id="@+id/textView"
+        android:textAlignment="center"
+        android:textSize="18dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -29,30 +31,33 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="time"
+        android:inputType="number"
         android:ems="10"
         android:id="@+id/hours"
         android:layout_below="@+id/distance"
-        android:layout_alignStart="@+id/distance" />  <!-- This is the Hours -->
+        android:layout_alignStart="@+id/distance"
+        android:hint="hours"/>  <!-- This is the Hours -->
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="time"
+        android:inputType="number"
         android:ems="10"
         android:id="@+id/minutes"
         android:labelFor="@string/minutes"
         android:layout_below="@+id/hours"
-        android:layout_alignStart="@+id/hours" />  <!-- This is the minutes -->
+        android:layout_alignStart="@+id/hours"
+        android:hint="minutes"/>  <!-- This is the minutes -->
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="time"
+        android:inputType="number"
         android:ems="10"
         android:id="@+id/seconds"
         android:layout_below="@+id/minutes"
-        android:layout_alignStart="@+id/minutes" />  <!-- This is the seconds -->
+        android:layout_alignStart="@+id/minutes"
+        android:hint="seconds"/>  <!-- This is the seconds -->
 
     <EditText
         android:layout_width="wrap_content"
@@ -60,8 +65,23 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/distance"
-        android:layout_marginTop="84dp"
-        android:layout_below="@+id/textView" />  <!-- This is the distance -->
+        android:layout_marginTop="82dp"
+        android:hint="distance"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />  <!-- This is the distance -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pace"
+        android:layout_below="@+id/seconds"
+        android:hint="Your pace will go here..."
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="80dp"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textSize="30dp" /> <!-- This is the pace -->
+
 
 
 
