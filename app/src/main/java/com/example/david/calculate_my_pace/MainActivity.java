@@ -56,9 +56,11 @@ public class MainActivity extends AppCompatActivity {
             distance = Integer.parseInt(editDistance.getText().toString());
         }
 
-        int totalSeconds = hours + minutes + seconds;
-        int pace = totalSeconds / distance;
-        textPace.setText(DateUtils.formatElapsedTime(pace));
+        if (!editSeconds.getText().toString().equals("") && !editHours.getText().toString().equals("") && !editMinutes.getText().toString().equals("") && !editDistance.getText().toString().equals("")) {
+            int totalSeconds = hours + minutes + seconds;
+            int pace = totalSeconds / distance;
+            textPace.setText(DateUtils.formatElapsedTime(pace));
+        }
     }
 
     private int minutesToSeconds() {
