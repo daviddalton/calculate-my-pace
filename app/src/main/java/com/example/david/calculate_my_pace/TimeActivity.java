@@ -34,6 +34,6 @@ public class TimeActivity extends AppCompatActivity {
     }
 
     public void calculate() {
-        
+
     }
 }
