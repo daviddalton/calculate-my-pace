@@ -10,13 +10,75 @@
     tools:context="com.example.david.calculate_my_pace.DistanceActivity">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/distance"
+        android:layout_below="@+id/seconds"
+        android:hint="Your distance will go here..."
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="60dp"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textSize="30dp" /> <!-- This is the distance -->
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Coming soon..."
-        android:id="@+id/textView2"
-        android:layout_alignParentTop="true"
+        android:text="@string/calculate_button"
+        android:id="@+id/calculate_button"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="100dp" />
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#3846a2"
+        android:textColor="#f9f9f9" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/hours"
+        android:hint="hours"
+        android:layout_below="@+id/pace"
+        android:layout_alignStart="@+id/pace" />  <!-- This is the Hours -->
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/minutes"
+        android:labelFor="@string/minutes"
+        android:layout_below="@+id/hours"
+        android:layout_alignStart="@+id/hours"
+        android:hint="minutes"/>  <!-- This is the minutes -->
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/seconds"
+        android:layout_below="@+id/minutes"
+        android:layout_alignStart="@+id/minutes"
+        android:hint="seconds"/>  <!-- This is the seconds -->
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/pace"
+        android:layout_marginTop="82dp"
+        android:hint="min/mile"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />  <!-- This is the pace -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insert your pace and total time in the fields below and then hit the calculate button!"
+        android:id="@+id/textView"
+        android:textAlignment="center"
+        android:textSize="18dp" />
 </RelativeLayout>
