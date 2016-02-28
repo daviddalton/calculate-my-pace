@@ -34,39 +34,6 @@ public class TimeActivity extends AppCompatActivity {
     }
 
     public void calculate() {
-
-        int hours = 0;
-        int minutes = 0;
-        int seconds = 0;
-        int distance = 0;
-
-        if (!editSeconds.getText().toString().equals("")) {
-            seconds = Integer.parseInt(editSeconds.getText().toString());
-        }
-        if (!editHours.getText().toString().equals("")) {
-            hours = hoursToSeconds();
-        }
-        if (!editMinutes.getText().toString().equals("")) {
-            minutes = minutesToSeconds();
-        }
-        if (!editDistance.getText().toString().equals("")) {
-            distance = Integer.parseInt(editDistance.getText().toString());
-        }
-
-        if (!editSeconds.getText().toString().equals("") && !editHours.getText().toString().equals("") && !editMinutes.getText().toString().equals("") && !editDistance.getText().toString().equals("")) {
-            int totalSeconds = hours + minutes + seconds;
-            int pace = totalSeconds / distance;
-            textPace.setText(DateUtils.formatElapsedTime(pace));
-        }
-    }
-
-    private int minutesToSeconds() {
-        int minutes = Integer.parseInt(editMinutes.getText().toString());
-        return minutes * 60;
-    }
-
-    private int hoursToSeconds() {
-        int hours = Integer.parseInt(editHours.getText().toString());
-        return hours * 3600;
+        
     }
 }
