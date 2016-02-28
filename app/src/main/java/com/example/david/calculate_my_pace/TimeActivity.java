@@ -2,13 +2,71 @@ package com.example.david.calculate_my_pace;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.format.DateUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class TimeActivity extends AppCompatActivity {
+
+    TextView textTime;
+    EditText editDistance;
+    EditText editPace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time);
+        editDistance = (EditText) findViewById(R.id.distance);
+        editPace = (EditText) findViewById(R.id.pace);
+        textTime = (TextView) findViewById(R.id.time);
 
+        Button button = (Button) findViewById(R.id.calculate_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calculate();
+            }
+
+        });
+
+    }
+
+    public void calculate() {
+
+        int hours = 0;
+        int minutes = 0;
+        int seconds = 0;
+        int distance = 0;
+
+        if (!editSeconds.getText().toString().equals("")) {
+            seconds = Integer.parseInt(editSeconds.getText().toString());
+        }
+        if (!editHours.getText().toString().equals("")) {
+            hours = hoursToSeconds();
+        }
+        if (!editMinutes.getText().toString().equals("")) {
+            minutes = minutesToSeconds();
+        }
+        if (!editDistance.getText().toString().equals("")) {
+            distance = Integer.parseInt(editDistance.getText().toString());
+        }
+
+        if (!editSeconds.getText().toString().equals("") && !editHours.getText().toString().equals("") && !editMinutes.getText().toString().equals("") && !editDistance.getText().toString().equals("")) {
+            int totalSeconds = hours + minutes + seconds;
+            int pace = totalSeconds / distance;
+            textPace.setText(DateUtils.formatElapsedTime(pace));
+        }
+    }
+
+    private int minutesToSeconds() {
+        int minutes = Integer.parseInt(editMinutes.getText().toString());
+        return minutes * 60;
+    }
+
+    private int hoursToSeconds() {
+        int hours = Integer.parseInt(editHours.getText().toString());
+        return hours * 3600;
     }
 }

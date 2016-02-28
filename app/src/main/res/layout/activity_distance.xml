@@ -80,5 +80,8 @@
         android:text="Insert your pace and total time in the fields below and then hit the calculate button!"
         android:id="@+id/textView"
         android:textAlignment="center"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:backgroundTint="#757575" />
 </RelativeLayout>
