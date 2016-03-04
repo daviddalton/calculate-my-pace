@@ -26,7 +26,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".DistanceActivity" />
-        <activity android:name=".TimeActivity"></activity>
+        <activity android:name=".TimeActivity" />
+        <activity android:name=".StopwatchActivity"></activity>
     </application>
 
 </manifest>
