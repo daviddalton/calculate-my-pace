@@ -24,6 +24,8 @@
         android:text="Start"
         android:id="@+id/start_button"
         android:onClick="startButtonClick"
+        android:background="#344297"
+        android:textColor="#fefefe"
         android:layout_alignTop="@+id/resetButton"
         android:layout_alignParentStart="true" />
 
@@ -33,7 +35,9 @@
         android:text="stop"
         android:id="@+id/stop_button"
         android:onClick="stopButtonClick"
-        android:layout_centerVertical="true"
+        android:background="#344297"
+        android:textColor="#fefefe"
+        android:layout_alignTop="@+id/resetButton"
         android:layout_alignParentEnd="true" />
 
     <Button
@@ -42,19 +46,11 @@
         android:text="Reset"
         android:id="@+id/resetButton"
         android:onClick="resetButtonClick"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:layout_below="@+id/chronometer" />
+        android:background="#344296"
+        android:textColor="#fefefe"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/hmsTekst"
-        android:textColor="#FFFFFF"
-        android:layout_below="@+id/stop_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="83dp" />
 
 
 </RelativeLayout>

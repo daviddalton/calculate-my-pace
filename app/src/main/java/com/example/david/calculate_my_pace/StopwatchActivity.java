@@ -23,8 +23,6 @@ public class StopwatchActivity extends AppCompatActivity {
     public void resetButtonClick(View v) {
         chronometer.setBase(SystemClock.elapsedRealtime());
         timeWhenStopped = 0;
-        TextView secondsText = (TextView) findViewById(R.id.hmsTekst);
-        secondsText.setText("0 seconds");
     }
 
     public void startButtonClick(View v) {
@@ -36,10 +34,7 @@ public class StopwatchActivity extends AppCompatActivity {
 
     public void stopButtonClick(View v) {
         if (!stopClicked) {
-            TextView secondsText = (TextView) findViewById(R.id.hmsTekst);
             timeWhenStopped = chronometer.getBase() - SystemClock.elapsedRealtime();
-            int seconds = (int) timeWhenStopped / 1000;
-            secondsText.setText(Math.abs(seconds) + " seconds");
             chronometer.stop();
             stopClicked = true;
         }
