@@ -9,4 +9,52 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.david.calculate_my_pace.StopwatchActivity">
 
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer"
+        android:layout_marginTop="117dp"
+        android:textSize="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/start_button"
+        android:onClick="startButtonClick"
+        android:layout_alignTop="@+id/resetButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop"
+        android:id="@+id/stop_button"
+        android:onClick="stopButtonClick"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/resetButton"
+        android:onClick="resetButtonClick"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/chronometer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/hmsTekst"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/stop_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="83dp" />
+
+
 </RelativeLayout>
