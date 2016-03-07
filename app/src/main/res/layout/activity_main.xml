@@ -9,14 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.david.calculate_my_pace.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Insert your time and distance in the fields below and then hit the calculate button!"
-        android:id="@+id/textView"
-        android:textAlignment="center"
-        android:textSize="18dp" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,46 +21,55 @@
         android:textColor="#f9f9f9" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/hours"
-        android:layout_below="@+id/distance"
-        android:layout_alignStart="@+id/distance"
-        android:hint="hours"/>  <!-- This is the Hours -->
+        android:hint="   hours"
+        android:layout_alignTop="@+id/minutes"
+        android:layout_toStartOf="@+id/distance"
+        android:background="@drawable/hoursbackground"
+        android:paddingLeft="14dp"/>  <!-- This is the Hours -->
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/minutes"
         android:labelFor="@string/minutes"
-        android:layout_below="@+id/hours"
-        android:layout_alignStart="@+id/hours"
-        android:hint="minutes"/>  <!-- This is the minutes -->
+        android:hint=" minutes"
+        android:layout_below="@+id/distance"
+        android:layout_toEndOf="@+id/hours"
+        android:layout_marginTop="62dp"
+        android:background="@drawable/minutesbackground"
+        android:paddingLeft="13dp"/>  <!-- This is the minutes -->
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/seconds"
-        android:layout_below="@+id/minutes"
-        android:layout_alignStart="@+id/minutes"
-        android:hint="seconds"/>  <!-- This is the seconds -->
+        android:hint="seconds"
+        android:layout_alignTop="@+id/minutes"
+        android:layout_toEndOf="@+id/minutes"
+        android:background="@drawable/secondsbackground"
+        android:paddingLeft="12dp"/>  <!-- This is the seconds -->
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/distance"
-        android:layout_marginTop="82dp"
-        android:hint="miles"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />  <!-- This is the distance -->
+        android:layout_marginTop="76dp"
+        android:hint="    miles"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/milesbackground"
+        android:paddingLeft="14dp"/>  <!-- This is the distance -->
 
     <TextView
         android:layout_width="match_parent"

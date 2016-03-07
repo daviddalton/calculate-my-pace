@@ -44,10 +44,10 @@ public class DistanceActivity extends AppCompatActivity {
 
     public void calculate() {
 
-        int hours = 0;
-        int minutes = 0;
-        int seconds = 0;
-        int pace = 0;
+        double hours = 0;
+        double minutes = 0;
+        double seconds = 0;
+        double pace = 0;
 
         if (!editSeconds.getText().toString().equals("")) {
             seconds = secondsToMinutes();
@@ -64,8 +64,8 @@ public class DistanceActivity extends AppCompatActivity {
         }
 
         if (!editSeconds.getText().toString().equals("") && !editHours.getText().toString().equals("") && !editMinutes.getText().toString().equals("") && !editPace.getText().toString().equals("")) {
-            int totalMinutes = hours + minutes + seconds;
-            int distance = pace / totalMinutes;
+            double totalMinutes = hours + minutes + seconds;
+            double distance = pace / totalMinutes;
             textDistance.setText(String.valueOf(distance));
         }
     }

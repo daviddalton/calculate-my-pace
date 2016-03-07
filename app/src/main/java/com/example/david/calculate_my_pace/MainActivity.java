@@ -38,10 +38,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void calculate() {
 
-        int hours = 0;
-        int minutes = 0;
-        int seconds = 0;
-        int distance = 0;
+        double hours = 0;
+        double minutes = 0;
+        double seconds = 0;
+        double distance = 0;
+
+
 
         if (!editSeconds.getText().toString().equals("")) {
             seconds = Integer.parseInt(editSeconds.getText().toString());
@@ -53,13 +55,13 @@ public class MainActivity extends AppCompatActivity {
             minutes = minutesToSeconds();
         }
         if (!editDistance.getText().toString().equals("")) {
-            distance = Integer.parseInt(editDistance.getText().toString());
+            distance = Double.parseDouble(editDistance.getText().toString());
         }
 
         if (!editSeconds.getText().toString().equals("") && !editHours.getText().toString().equals("") && !editMinutes.getText().toString().equals("") && !editDistance.getText().toString().equals("")) {
-            int totalSeconds = hours + minutes + seconds;
-            int pace = totalSeconds / distance;
-            textPace.setText(DateUtils.formatElapsedTime(pace));
+            double totalSeconds = hours + minutes + seconds;
+            double pace = totalSeconds / distance;
+            textPace.setText(DateUtils.formatElapsedTime((long) pace));
         }
     }
 
