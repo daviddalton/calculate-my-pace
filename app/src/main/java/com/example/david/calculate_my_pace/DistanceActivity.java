@@ -2,11 +2,12 @@ package com.example.david.calculate_my_pace;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.GregorianCalendar;
 
 public class DistanceActivity extends AppCompatActivity {
 
@@ -30,10 +31,15 @@ public class DistanceActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                GregorianCalendar();
                 calculate();
             }
 
         });
+    }
+
+    public void GregorianCalendar() {
+
     }
 
     public void calculate() {
@@ -54,7 +60,7 @@ public class DistanceActivity extends AppCompatActivity {
         }
         if (!editPace.getText().toString().equals("")) {
             pace = Integer.parseInt(editPace.getText().toString());
-            // take the integer and turn into decimal
+            // take the integer and turn into date
         }
 
         if (!editSeconds.getText().toString().equals("") && !editHours.getText().toString().equals("") && !editMinutes.getText().toString().equals("") && !editPace.getText().toString().equals("")) {

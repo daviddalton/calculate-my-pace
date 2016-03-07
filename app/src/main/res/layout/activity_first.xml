@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Pace"
         android:id="@+id/pace"
-        android:background="#3948a3"
+        android:background="#2fad66"
         android:textColor="#fefefe"
         android:layout_above="@+id/distance"
         android:layout_alignParentEnd="true"
@@ -25,24 +25,26 @@
         android:layout_height="wrap_content"
         android:text="Distance"
         android:id="@+id/distance"
-        android:background="#3948a3"
-        android:textColor="#fefefe"
+        android:background="#d1d2d1"
+        android:textColor="#000000"
         android:layout_above="@+id/time"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:clickable="false" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Time"
         android:id="@+id/time"
-        android:background="#3948a3"
-        android:textColor="#fefefe"
+        android:background="#cfd0cf"
+        android:textColor="#000000"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:clickable="false" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -25,7 +25,7 @@
         android:text="Start"
         android:id="@+id/start_button"
         android:onClick="startButtonClick"
-        android:background="#344297"
+        android:background="#2fad66"
         android:textColor="#fefefe"
         android:layout_alignTop="@+id/resetButton"
         android:layout_alignParentStart="true" />
@@ -36,7 +36,7 @@
         android:text="stop"
         android:id="@+id/stop_button"
         android:onClick="stopButtonClick"
-        android:background="#344297"
+        android:background="#2fad66"
         android:textColor="#fefefe"
         android:layout_alignTop="@+id/resetButton"
         android:layout_alignParentEnd="true" />
@@ -47,7 +47,7 @@
         android:text="Reset"
         android:id="@+id/resetButton"
         android:onClick="resetButtonClick"
-        android:background="#344296"
+        android:background="#2fad66"
         android:textColor="#fefefe"
         android:layout_marginBottom="102dp"
         android:layout_alignParentBottom="true"
