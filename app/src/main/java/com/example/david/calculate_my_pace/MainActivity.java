@@ -34,6 +34,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+        button = (Button) findViewById(R.id.clear_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clear();
+            }
+
+
+        });
     }
 
     public void calculate() {
@@ -73,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
     private int hoursToSeconds() {
         int hours = Integer.parseInt(editHours.getText().toString());
         return hours * 3600;
+    }
+
+    public void clear() {
+        editDistance.getText().clear();
+        editHours.getText().clear();
+        editMinutes.getText().clear();
+        editSeconds.getText().clear();
+        textPace.setText("Your pace will go here...");
     }
 
 }
