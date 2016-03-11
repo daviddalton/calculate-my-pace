@@ -17,8 +17,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:backgroundTint="#2fad66"
-        android:textColor="#f9f9f9" />
+        android:textColor="#f9f9f9"
+        android:background="#2fad66" />
 
     <EditText
         android:layout_width="100dp"
