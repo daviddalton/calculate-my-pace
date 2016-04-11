@@ -2,9 +2,18 @@
     <string name="app_name">Calculate My Pace</string>
     <string name="calculate_button">Calculate</string>
     <string name="title_activity_calculate">calculate</string>
-    <string name="minutes">Minutes:</string>
-    <string name="hours">Hours:</string>
-    <string name="seconds">Seconds:</string>
-    <string name="distance">Distance:</string>
+    <string name="minutes">Minutes</string>
+    <string name="hours">Hours</string>
+    <string name="seconds">Seconds</string>
+    <string name="distance">coming soon…</string>
+    <string name="pace">Pace</string>
+    <string name="time">coming soon…</string>
+    <string name="pace_text">Your pace will go here…</string>
+    <string name="clear">Clear</string>
+    <string name="hours_hint">hours</string>
+    <string name="minutes_hint">minutes</string>
+    <string name="seconds_hint">seconds</string>
+    <string name="miles_hint">miles</string>
+    <string name="units_switch">Units  </string>
 
 </resources>

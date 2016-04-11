@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calculate();
+                    calculate();
+
             }
 
         });
@@ -43,6 +47,20 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
+        });
+
+        Switch converter = (Switch) findViewById(R.id.units_switch);
+        converter.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    editDistance.setHint("kilo");
+                    // The toggle is enabled. Display the hint "Kilometers"
+                } else {
+                    editDistance.setHint("miles");
+                    // The toggle is disabled. Display the hint "Miles"
+                }
+            }
         });
     }
 

@@ -12,7 +12,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pace"
+        android:text="@string/pace"
         android:id="@+id/pace"
         android:background="#2fad66"
         android:textColor="#fefefe"
@@ -23,30 +23,28 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Distance"
+        android:text="@string/distance"
         android:id="@+id/distance"
-        android:background="#d1d2d1"
+        android:background="#f7be54"
         android:textColor="#000000"
         android:layout_above="@+id/time"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="5dp"
-        android:clickable="false"
-        android:visibility="invisible" />
+        android:enabled="false" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time"
+        android:text="@string/time"
         android:id="@+id/time"
-        android:background="#cfd0cf"
+        android:background="#f7be54"
         android:textColor="#000000"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="5dp"
-        android:clickable="false"
-        android:visibility="invisible" />
+        android:enabled="false" />
 
     <ImageButton
         android:layout_width="wrap_content"

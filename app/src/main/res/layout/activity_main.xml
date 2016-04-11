@@ -26,7 +26,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/hours"
-        android:hint="   hours"
+        android:hint="@string/hours_hint"
         android:layout_alignTop="@+id/minutes"
         android:layout_toStartOf="@+id/distance"
         android:background="@drawable/hoursbackground"
@@ -39,7 +39,7 @@
         android:ems="10"
         android:id="@+id/minutes"
         android:labelFor="@string/minutes"
-        android:hint=" minutes"
+        android:hint="@string/minutes_hint"
         android:layout_below="@+id/distance"
         android:layout_toEndOf="@+id/hours"
         android:layout_marginTop="62dp"
@@ -52,7 +52,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/seconds"
-        android:hint="seconds"
+        android:hint="@string/seconds_hint"
         android:layout_alignTop="@+id/minutes"
         android:layout_toEndOf="@+id/minutes"
         android:background="@drawable/secondsbackground"
@@ -65,7 +65,7 @@
         android:ems="10"
         android:id="@+id/distance"
         android:layout_marginTop="76dp"
-        android:hint="    miles"
+        android:hint="@string/miles_hint"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/milesbackground"
@@ -76,7 +76,7 @@
         android:layout_height="match_parent"
         android:id="@+id/pace"
         android:layout_below="@+id/seconds"
-        android:hint="Your pace will go here..."
+        android:hint="@string/pace_text"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="80dp"
         android:layout_centerInParent="true"
@@ -86,7 +86,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clear"
+        android:text="@string/clear"
         android:id="@+id/clear_button"
         android:background="#f7be54"
         android:layout_alignParentBottom="true"
@@ -95,10 +95,14 @@
         android:textColor="#fefefe"
         android:layout_marginTop="5dp" />
 
-
-
-
-
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/units_switch"
+        android:checked="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/pace"
+        android:text="@string/units_switch" />
 
 
 </RelativeLayout>
