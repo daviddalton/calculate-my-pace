@@ -1,11 +1,10 @@
-package com.example.david.calculate_my_pace;
+package com.calculatemypace.david.calculate_my_pace;
 
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Chronometer;
-import android.widget.TextView;
 
 public class StopwatchActivity extends AppCompatActivity {
 

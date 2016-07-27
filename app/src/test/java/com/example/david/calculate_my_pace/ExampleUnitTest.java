@@ -1,4 +1,4 @@
-package com.example.david.calculate_my_pace;
+package com.calculatemypace.david.calculate_my_pace;
 
 import org.junit.Test;
 

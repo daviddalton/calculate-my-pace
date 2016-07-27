@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.david.calculate_my_pace.calculate">
+    tools:context="com.calculatemypace.david.calculate_my_pace.calculate">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

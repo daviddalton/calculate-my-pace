@@ -5,7 +5,7 @@ android {
     buildToolsVersion "19.1.0"
 
     defaultConfig {
-        applicationId "com.example.david.calculate_my_pace"
+        applicationId "com.calculatemypace.david.calculateMyPace"
         minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
