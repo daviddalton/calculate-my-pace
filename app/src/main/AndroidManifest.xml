@@ -11,17 +11,6 @@
         <activity android:name="com.calculatemypace.david.calculateMyPace.MainActivity"
                   android:screenOrientation="portrait"
                   android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity
-            android:name="com.calculatemypace.david.calculateMyPace.calculate"
-            android:label="@string/title_activity_calculate"
-            android:parentActivityName="com.calculatemypace.david.calculateMyPace.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation|screenSize">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.calculatemypace.david.calculateMyPace.MainActivity" />
-        </activity>
         <activity android:name="com.calculatemypace.david.calculateMyPace.FirstActivity"
                   android:screenOrientation="portrait"
                   android:configChanges="keyboardHidden|orientation|screenSize">
@@ -31,12 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.calculatemypace.david.calculateMyPace.DistanceActivity"
-                  android:screenOrientation="portrait"
-                  android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.calculatemypace.david.calculateMyPace.TimeActivity"
-                  android:screenOrientation="portrait"
-                  android:configChanges="keyboardHidden|orientation|screenSize"/>
         <activity android:name="com.calculatemypace.david.calculateMyPace.StopwatchActivity"
                   android:screenOrientation="portrait"
                   android:configChanges="keyboardHidden|orientation|screenSize"></activity>
