@@ -1,4 +1,4 @@
-package com.calculatemypace.david.calculate_my_pace;
+package com.calculatemypace.david.calculateMyPace;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editSeconds;
     EditText editDistance;
     TextView textPace;
+    Switch converter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +28,13 @@ public class MainActivity extends AppCompatActivity {
         editSeconds = (EditText) findViewById(R.id.seconds);
         editDistance = (EditText) findViewById(R.id.distance);
         textPace = (TextView) findViewById(R.id.pace);
+        converter = (Switch) findViewById(R.id.units_switch);
 
         Button button = (Button) findViewById(R.id.calculate_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    calculate();
+                calculate();
 
             }
 
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        Switch converter = (Switch) findViewById(R.id.units_switch);
+
         converter.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -68,8 +70,9 @@ public class MainActivity extends AppCompatActivity {
         double hours = 0;
         double minutes = 0;
         double seconds = 0;
-        double distance = 0;
-
+        double distanceMile = 0;
+        double distanceKilo = 0;
+        double kiloConversion = 0.62;
 
 
         if (!editSeconds.getText().toString().equals("")) {
@@ -82,15 +85,21 @@ public class MainActivity extends AppCompatActivity {
             minutes = minutesToSeconds();
         }
         if (!editDistance.getText().toString().equals("")) {
-            distance = Double.parseDouble(editDistance.getText().toString());
+            distanceMile = Double.parseDouble(editDistance.getText().toString());
+            distanceKilo = Double.parseDouble(editDistance.getText().toString()) * kiloConversion;
         }
 
-        if (!editSeconds.getText().toString().equals("") && !editHours.getText().toString().equals("") && !editMinutes.getText().toString().equals("") && !editDistance.getText().toString().equals("")) {
+        if (!editSeconds.getText().toString().equals("") && !editHours.getText().toString().equals("") && !editMinutes.getText().toString().equals("") && !editDistance.getText().toString().equals("") && editDistance.getHint().equals("miles")) {
             double totalSeconds = hours + minutes + seconds;
-            double pace = totalSeconds / distance;
-            textPace.setText(DateUtils.formatElapsedTime((long) pace));
+            double pace = totalSeconds / distanceMile;
+            textPace.setText(DateUtils.formatElapsedTime((long) pace) + " " + "min/mile");
+        } else if(!editSeconds.getText().toString().equals("") && !editHours.getText().toString().equals("") && !editMinutes.getText().toString().equals("") && !editDistance.getText().toString().equals("")) {
+            double totalSeconds = hours + minutes + seconds;
+            double pace = totalSeconds / distanceKilo;
+            textPace.setText(DateUtils.formatElapsedTime((long) pace) + " " + "min/mile");
         }
-    }
+
+}
 
     private int minutesToSeconds() {
         int minutes = Integer.parseInt(editMinutes.getText().toString());

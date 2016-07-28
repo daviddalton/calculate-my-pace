@@ -1,4 +1,4 @@
-package com.calculatemypace.david.calculate_my_pace;
+package com.calculatemypace.david.calculateMyPace;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

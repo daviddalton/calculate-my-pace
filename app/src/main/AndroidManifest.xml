@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.calculatemypace.david.calculate_my_pace">
+    package="com.calculatemypace.david.calculateMyPace">
 
     <application
         android:allowBackup="true"
@@ -8,26 +8,38 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.calculatemypace.david.calculateMyPace.MainActivity"
+                  android:screenOrientation="portrait"
+                  android:configChanges="keyboardHidden|orientation|screenSize"/>
         <activity
-            android:name=".calculate"
+            android:name="com.calculatemypace.david.calculateMyPace.calculate"
             android:label="@string/title_activity_calculate"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:parentActivityName="com.calculatemypace.david.calculateMyPace.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.calculatemypace.david.calculateMyPace.MainActivity" />
         </activity>
-        <activity android:name=".FirstActivity">
+        <activity android:name="com.calculatemypace.david.calculateMyPace.FirstActivity"
+                  android:screenOrientation="portrait"
+                  android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DistanceActivity" />
-        <activity android:name=".TimeActivity" />
-        <activity android:name=".StopwatchActivity"></activity>
+        <activity android:name="com.calculatemypace.david.calculateMyPace.DistanceActivity"
+                  android:screenOrientation="portrait"
+                  android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.calculatemypace.david.calculateMyPace.TimeActivity"
+                  android:screenOrientation="portrait"
+                  android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.calculatemypace.david.calculateMyPace.StopwatchActivity"
+                  android:screenOrientation="portrait"
+                  android:configChanges="keyboardHidden|orientation|screenSize"></activity>
     </application>
 
 </manifest>

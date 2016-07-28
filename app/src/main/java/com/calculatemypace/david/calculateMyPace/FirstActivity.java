@@ -1,4 +1,4 @@
-package com.calculatemypace.david.calculate_my_pace;
+package com.calculatemypace.david.calculateMyPace;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
