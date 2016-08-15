@@ -22,11 +22,11 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
-        Button distanceButton = (Button) findViewById(R.id.distance);
+        Button distanceButton = (Button) findViewById(R.id.stopwatch);
 
         distanceButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(FirstActivity.this, DistanceActivity.class));
+                startActivity(new Intent(FirstActivity.this, StopwatchActivity.class));
             }
         });
 
@@ -34,7 +34,7 @@ public class FirstActivity extends AppCompatActivity {
 
         timeButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(FirstActivity.this, TimeActivity.class));
+                startActivity(new Intent(FirstActivity.this, StopwatchActivity.class));
             }
         });
 
