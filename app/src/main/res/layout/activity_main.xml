@@ -1,108 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.calculatemypace.david.calculateMyPace.MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/calculate_button"
-        android:id="@+id/calculate_button"
-        android:textColor="#f9f9f9"
-        android:background="#2fad66"
-        android:layout_above="@+id/clear_button"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/hours"
-        android:hint="@string/hours_hint"
-        android:layout_alignTop="@+id/minutes"
-        android:layout_toStartOf="@+id/distance"
-        android:background="@drawable/hoursbackground"
-        android:paddingLeft="14dp"/>  <!-- This is the Hours -->
-
-    <EditText
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/minutes"
-        android:labelFor="@string/minutes"
-        android:hint="@string/minutes_hint"
-        android:layout_below="@+id/distance"
-        android:layout_toEndOf="@+id/hours"
-        android:layout_marginTop="62dp"
-        android:background="@drawable/minutesbackground"
-        android:paddingLeft="13dp"/>  <!-- This is the minutes -->
-
-    <EditText
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/seconds"
-        android:hint="@string/seconds_hint"
-        android:layout_alignTop="@+id/minutes"
-        android:layout_toEndOf="@+id/minutes"
-        android:background="@drawable/secondsbackground"
-        android:paddingLeft="12dp"/>  <!-- This is the seconds -->
-
-    <EditText
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/distance"
-        android:layout_marginTop="76dp"
-        android:hint="@string/miles_hint"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/milesbackground"
-        android:paddingLeft="14dp"/>  <!-- This is the distance -->
-
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/pace"
-        android:layout_below="@+id/seconds"
-        android:hint="@string/pace_text"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="80dp"
-        android:layout_centerInParent="true"
-        android:textAlignment="center"
-        android:textSize="30dp" /><!-- This is the pace -->
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/clear"
-        android:id="@+id/clear_button"
-        android:background="#f7be54"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:textColor="#fefefe"
-        android:layout_marginTop="5dp" />
+        <Switch
+            android:id="@+id/units_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="right"
+            android:checked="false"
+            android:text="@string/units_switch"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp" />
 
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/units_switch"
-        android:checked="false"
-        android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/pace"
-        android:text="@string/units_switch" />
+    </RelativeLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/distance"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/milesbackground"
+            android:ems="10"
+            android:hint="@string/miles_hint"
+            android:inputType="numberDecimal"
+            android:paddingStart="14dp"
+            android:textSize="20sp" />
+        <!-- This is the distance -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/hours"
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:background="@drawable/hoursbackground"
+                android:ems="10"
+                android:hint="@string/hours_hint"
+                android:inputType="number"
+                android:paddingLeft="14dp"
+                android:textSize="20sp" />
+            <!-- This is the Hours -->
+
+            <EditText
+                android:id="@+id/minutes"
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:background="@drawable/minutesbackground"
+                android:ems="10"
+                android:hint="@string/minutes_hint"
+                android:inputType="number"
+                android:labelFor="@string/minutes"
+                android:paddingLeft="13dp"
+                android:textSize="20sp" />
+            <!-- This is the minutes -->
+
+            <EditText
+                android:id="@+id/seconds"
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:background="@drawable/secondsbackground"
+                android:ems="10"
+                android:hint="@string/seconds_hint"
+                android:inputType="number"
+                android:paddingLeft="12dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/pace"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/pace_text"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:gravity="bottom"/>
+
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_above="@+id/clear_button"
+            android:background="#2fad66"
+            android:text="@string/calculate_button"
+            android:textColor="#f9f9f9"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:background="#f5c15b"
+            android:text="@string/clear"
+            android:textColor="#fefefe"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

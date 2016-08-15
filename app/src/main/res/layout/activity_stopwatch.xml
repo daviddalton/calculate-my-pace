@@ -3,10 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.calculatemypace.david.calculateMyPace.StopwatchActivity"
     android:keepScreenOn="true"
     android:orientation="vertical">
@@ -17,32 +13,35 @@
         android:id="@+id/timer"
         android:layout_marginTop="83dp"
         android:textSize="75sp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="100dp"
-        android:layout_weight="7"/>
+        android:layout_gravity="center_horizontal"/>
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:id="@+id/start_button"
-        android:background="#2fad66"
-        android:textColor="#fefefe"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="4dp"
-        android:layout_weight="1"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="bottom">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Reset"
-        android:id="@+id/reset_button"
-        android:background="#f7be54"
-        android:textColor="#fefefe"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="4dp"
-        android:layout_weight="1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Start"
+            android:id="@+id/start_button"
+            android:background="#2fad66"
+            android:textColor="#fefefe"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Reset"
+            android:id="@+id/reset_button"
+            android:background="#f7be54"
+            android:textColor="#fefefe"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp" />
 
+    </LinearLayout>
 
 </LinearLayout>

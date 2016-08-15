@@ -9,10 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.calculatemypace.david.calculateMyPace.MainActivity"
-                  android:screenOrientation="portrait"
-                  android:configChanges="keyboardHidden|orientation|screenSize"/>
+                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:parentActivityName=".FirstActivity"/>
         <activity android:name="com.calculatemypace.david.calculateMyPace.FirstActivity"
-                  android:screenOrientation="portrait"
                   android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.calculatemypace.david.calculateMyPace.StopwatchActivity"
-                  android:screenOrientation="portrait"
-                  android:configChanges="keyboardHidden|orientation|screenSize"></activity>
+                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:parentActivityName=".FirstActivity"/>
     </application>
 
 </manifest>

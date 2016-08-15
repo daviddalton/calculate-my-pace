@@ -30,14 +30,6 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
-        Button timeButton = (Button) findViewById(R.id.time);
-
-        timeButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(FirstActivity.this, StopwatchActivity.class));
-            }
-        });
-
         ImageButton button = (ImageButton) findViewById(R.id.imageButton);
 
         button.setOnClickListener(new View.OnClickListener() {
