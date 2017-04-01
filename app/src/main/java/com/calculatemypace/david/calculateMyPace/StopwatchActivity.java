@@ -31,7 +31,7 @@ public class StopwatchActivity extends AppCompatActivity {
         butnstart = (Button) findViewById(R.id.start_button);
         butnreset = (Button) findViewById(R.id.reset_button);
         time = (TextView) findViewById(R.id.timer);
-        time.setText("00:00:00");
+        time.setText("0:00:00");
 
 
         butnstart.setOnClickListener(new OnClickListener() {
@@ -69,8 +69,13 @@ public class StopwatchActivity extends AppCompatActivity {
                 milliseconds = 0;
                 butnstart.setText("Start");
                 handler.removeCallbacks(updateTimer);
-                time.setText("00:00:00");
+                time.setText("0:00:00");
             }});
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+
     }
 
     public Runnable updateTimer = new Runnable() {
