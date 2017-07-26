@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         editDistance = (EditText) findViewById(R.id.distance);
         textPace = (TextView) findViewById(R.id.pace);
         converter = (Switch) findViewById(R.id.units_switch);
+        converter.setText("miles");
 
         Button button = (Button) findViewById(R.id.calculate_button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -56,9 +57,11 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     editDistance.setHint("kilo");
+                    converter.setText("kilometers");
                     // The toggle is enabled. Display the hint "Kilometers"
                 } else {
                     editDistance.setHint("miles");
+                    converter.setText("miles");
                     // The toggle is disabled. Display the hint "Miles"
                 }
             }
@@ -82,23 +85,29 @@ public class MainActivity extends AppCompatActivity {
 
         if (!editSeconds.getText().toString().equals("")) {
             seconds = Integer.parseInt(editSeconds.getText().toString());
+        } else {
+            seconds = 0;
         }
         if (!editHours.getText().toString().equals("")) {
             hours = hoursToSeconds();
+        } else {
+            hours = 0;
         }
         if (!editMinutes.getText().toString().equals("")) {
             minutes = minutesToSeconds();
+        } else {
+            minutes = 0;
         }
         if (!editDistance.getText().toString().equals("")) {
             distanceMile = Double.parseDouble(editDistance.getText().toString());
             distanceKilo = Double.parseDouble(editDistance.getText().toString()) * kiloConversion;
         }
 
-        if (!editSeconds.getText().toString().equals("") && !editHours.getText().toString().equals("") && !editMinutes.getText().toString().equals("") && !editDistance.getText().toString().equals("") && editDistance.getHint().equals("miles")) {
+        if (!editDistance.getText().toString().equals("") && editDistance.getHint().equals("miles")) {
             double totalSeconds = hours + minutes + seconds;
             double pace = totalSeconds / distanceMile;
             textPace.setText(DateUtils.formatElapsedTime((long) pace) + " " + "min/mile");
-        } else if(!editSeconds.getText().toString().equals("") && !editHours.getText().toString().equals("") && !editMinutes.getText().toString().equals("") && !editDistance.getText().toString().equals("")) {
+        } else if(!editDistance.getText().toString().equals("")) {
             double totalSeconds = hours + minutes + seconds;
             double pace = totalSeconds / distanceKilo;
             textPace.setText(DateUtils.formatElapsedTime((long) pace) + " " + "min/mile");
