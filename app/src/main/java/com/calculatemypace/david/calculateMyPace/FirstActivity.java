@@ -29,14 +29,6 @@ public class FirstActivity extends AppCompatActivity {
                 startActivity(new Intent(FirstActivity.this, StopwatchActivity.class));
             }
         });
-
-        ImageButton button = (ImageButton) findViewById(R.id.imageButton);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(FirstActivity.this, StopwatchActivity.class));
-            }
-        });
     }
 
     
