@@ -19,7 +19,7 @@
             android:layout_alignParentTop="true"
             android:layout_gravity="right"
             android:checked="false"
-            android:text="@string/units_switch"
+            android:text="@string/miles_label"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp" />
 
@@ -41,7 +41,7 @@
             android:layout_marginTop="24dp"
             android:background="@drawable/milesbackground"
             android:ems="10"
-            android:hint="@string/miles_hint"
+            android:hint="@string/miles_label"
             android:inputType="numberDecimal"
             android:paddingStart="14dp"
             android:textSize="20sp" />

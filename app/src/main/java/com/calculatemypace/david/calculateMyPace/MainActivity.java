@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         editDistance = (EditText) findViewById(R.id.distance);
         textPace = (TextView) findViewById(R.id.pace);
         converter = (Switch) findViewById(R.id.units_switch);
-        converter.setText("miles");
+        converter.setText(R.string.miles_label);
 
         Button button = (Button) findViewById(R.id.calculate_button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -57,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     editDistance.setHint("kilo");
-                    converter.setText("kilometers");
+                    converter.setText(R.string.kilometers_label);
                     // The toggle is enabled. Display the hint "Kilometers"
                 } else {
                     editDistance.setHint("miles");
-                    converter.setText("miles");
+                    converter.setText(R.string.miles_label);
                     // The toggle is disabled. Display the hint "Miles"
                 }
             }
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         editHours.getText().clear();
         editMinutes.getText().clear();
         editSeconds.getText().clear();
-        textPace.setText("Your pace will go here...");
+        textPace.setText(R.string.pace_text);
     }
 
 }
