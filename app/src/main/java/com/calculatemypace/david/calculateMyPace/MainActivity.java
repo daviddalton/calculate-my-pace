@@ -23,46 +23,42 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        editMinutes = (EditText) findViewById(R.id.minutes);
-        editHours = (EditText) findViewById(R.id.hours);
-        editSeconds = (EditText) findViewById(R.id.seconds);
-        editDistance = (EditText) findViewById(R.id.distance);
-        textPace = (TextView) findViewById(R.id.pace);
-        converter = (Switch) findViewById(R.id.units_switch);
+        editMinutes = findViewById(R.id.minutes);
+        editHours = findViewById(R.id.hours);
+        editSeconds = findViewById(R.id.seconds);
+        editDistance = findViewById(R.id.distance);
+        textPace = findViewById(R.id.pace);
+        converter = findViewById(R.id.units_switch);
         converter.setText("miles");
 
-        Button button = (Button) findViewById(R.id.calculate_button);
+        Button button = findViewById(R.id.calculate_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 calculate();
-
             }
 
         });
 
-        button = (Button) findViewById(R.id.clear_button);
+        button = findViewById(R.id.clear_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clear();
             }
-
-
         });
-
 
         converter.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
+                    // The toggle is enabled. Display the hint "kilometers"
                     editDistance.setHint("kilo");
                     converter.setText("kilometers");
-                    // The toggle is enabled. Display the hint "Kilometers"
                 } else {
+                    // The toggle is disabled. Display the hint "miles"
                     editDistance.setHint("miles");
                     converter.setText("miles");
-                    // The toggle is disabled. Display the hint "Miles"
                 }
             }
         });
@@ -70,14 +66,13 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-
     }
 
     public void calculate() {
 
-        double hours = 0;
-        double minutes = 0;
-        double seconds = 0;
+        double hours;
+        double minutes;
+        double seconds;
         double distanceMile = 0;
         double distanceKilo = 0;
         double kiloConversion = 0.62;
