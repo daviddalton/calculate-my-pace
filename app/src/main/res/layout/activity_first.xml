@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.calculatemypace.david.calculateMyPace.FirstActivity"
+    tools:context="com.calculatemypace.david.calculatemypace.FirstActivity"
     android:orientation="vertical">
 
     <ImageButton
@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:text="@string/pace"
-                android:id="@+id/pace"
+                android:id="@+id/pace_button"
                 android:background="#41bf6f"
                 android:textColor="#fefefe"
                 android:textSize="20sp" />

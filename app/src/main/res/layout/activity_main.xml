@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.calculatemypace.david.calculateMyPace.MainActivity">
+    tools:context="com.calculatemypace.david.calculatemypace.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <Switch
+        <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/units_switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
             android:checked="false"
             android:text="@string/units_switch"
             android:layout_marginTop="8dp"
-            android:layout_marginRight="8dp" />
+            android:layout_marginEnd="8dp" />
 
     </RelativeLayout>
 
@@ -45,7 +45,6 @@
             android:inputType="numberDecimal"
             android:paddingStart="14dp"
             android:textSize="20sp" />
-        <!-- This is the distance -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +62,6 @@
                 android:inputType="number"
                 android:paddingLeft="14dp"
                 android:textSize="20sp" />
-            <!-- This is the Hours -->
 
             <EditText
                 android:id="@+id/minutes"
@@ -76,7 +74,6 @@
                 android:labelFor="@string/minutes"
                 android:paddingLeft="13dp"
                 android:textSize="20sp" />
-            <!-- This is the minutes -->
 
             <EditText
                 android:id="@+id/seconds"
@@ -99,7 +96,7 @@
         android:layout_weight="3">
 
         <TextView
-            android:id="@+id/pace"
+            android:id="@+id/pace_text"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:layout_centerHorizontal="true"

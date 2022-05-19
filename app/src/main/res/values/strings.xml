@@ -14,11 +14,14 @@
     <string name="minutes_hint">minutes</string>
     <string name="seconds_hint">seconds</string>
     <string name="miles_hint">miles</string>
+    <string name="kilometers_hint">miles</string>
+    <string name="kilo_hint">kilo</string>
     <string name="units_switch">Units  </string>
-    <string name="start_time">00:00:00</string>
-    <string name="start">Start</string>
+    <string name="start_button">Start</string>
     <string name="reset">Reset</string>
     <string name="stop">Stop</string>
     <string name="stopwatch">Stopwatch</string>
+    <string name="start_time">0:00:00</string>
+    <string name="pause_button">Pause</string>
 
 </resources>

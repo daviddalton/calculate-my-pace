@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.calculatemypace.david.calculateMyPace.StopwatchActivity"
+    tools:context="com.calculatemypace.david.calculatemypace.StopwatchActivity"
     android:keepScreenOn="true"
     android:orientation="vertical">
 
