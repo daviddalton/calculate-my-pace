@@ -1,4 +1,4 @@
-package com.calculatemypace.david.calculatemypace
+package com.daltonapps.calculatemypace
 
 import android.app.Activity
 import android.os.Bundle
@@ -9,6 +9,7 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnCheckedChanged
 import butterknife.OnClick
+import com.daltonapps.calculatemypace.calculatemypace.R
 import com.google.android.material.switchmaterial.SwitchMaterial
 
 class MainActivity : Activity() {

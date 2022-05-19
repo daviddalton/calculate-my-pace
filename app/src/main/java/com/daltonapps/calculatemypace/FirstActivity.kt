@@ -1,23 +1,25 @@
-package com.calculatemypace.david.calculatemypace
+package com.daltonapps.calculatemypace
 
 import android.app.Activity
 import android.os.Bundle
 import android.content.Intent
-import android.util.Log
-import android.view.View
-import android.widget.Button
-import android.widget.ImageButton
-import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
+import com.daltonapps.calculatemypace.calculatemypace.R
+import com.daltonapps.calculatemypace.modules.log.LogsActivity
+import com.daltonapps.calculatemypace.modules.stopwatch.StopwatchActivity
 
 class FirstActivity : Activity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first)
         ButterKnife.bind(this)
 
+    }
+
+    @OnClick(R.id.logs_button)
+    fun startLogsActivity() {
+        startActivity(Intent(this, LogsActivity::class.java))
     }
 
     @OnClick(R.id.pace_button)

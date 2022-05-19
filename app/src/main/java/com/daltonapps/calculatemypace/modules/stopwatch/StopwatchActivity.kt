@@ -1,15 +1,14 @@
-package com.calculatemypace.david.calculatemypace
+package com.daltonapps.calculatemypace.modules.stopwatch
 
 import android.app.Activity
 import android.widget.TextView
 import android.os.Bundle
 import android.os.Handler
 import android.os.SystemClock
-import android.view.View
 import android.widget.Button
 import butterknife.BindView
 import butterknife.ButterKnife
-import org.w3c.dom.Text
+import com.daltonapps.calculatemypace.calculatemypace.R
 
 class StopwatchActivity : Activity() {
     @BindView(R.id.start_button) lateinit var buttonStart: Button

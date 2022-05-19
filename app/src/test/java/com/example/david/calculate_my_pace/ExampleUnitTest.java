@@ -1,4 +1,4 @@
-package com.calculatemypace.david.calculatemypace;
+package com.daltonapps.calculatemypace.calculatemypace;
 
 import org.junit.Test;
 

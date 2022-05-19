@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.calculatemypace.david.calculatemypace.FirstActivity"
+    tools:context="com.daltonapps.calculatemypace.FirstActivity"
     android:orientation="vertical">
 
     <ImageButton
@@ -20,22 +20,34 @@
         android:layout_weight="1"
         android:orientation="vertical"
         android:gravity="bottom">
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:text="@string/pace"
-                android:id="@+id/pace_button"
-                android:background="#41bf6f"
-                android:textColor="#fefefe"
-                android:textSize="20sp" />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:text="@string/stopwatch"
-                android:id="@+id/stopwatch"
-                android:background="#f7be54"
-                android:textColor="#f9f9f9"
-                android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/logs_button"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="@string/logs_button"
+            android:background="#f7be54"
+            android:textColor="#fefefe"
+            android:textSize="20sp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="@string/pace"
+            android:id="@+id/pace_button"
+            android:background="#41bf6f"
+            android:textColor="#fefefe"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="@string/stopwatch"
+            android:id="@+id/stopwatch"
+            android:background="#f7be54"
+            android:textColor="#f9f9f9"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
 </LinearLayout>
